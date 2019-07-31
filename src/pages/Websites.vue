@@ -18,7 +18,7 @@ export default {
 
 <page-query>
   query websitePosts {
-    posts: allWebPost (filter: { website: { eq: true }}) {
+    posts: allWebPost (filter: { website: { eq: true }}, sortBy: "date", order: DESC) {
       edges {
         node {
           id
