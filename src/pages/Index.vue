@@ -33,7 +33,7 @@ export default {
 
 <page-query>
   query blogPosts {
-    posts: allWebPost (filter: { blogpost: { eq: true }}, sortBy: "date", order: DESC) {
+    posts: allWebPost (filter: { blogpost: { eq: true }}, limit:3, sortBy: "date", order: DESC) {
       edges {
         node {
           id
@@ -44,7 +44,7 @@ export default {
         }
       }
     },
-    webposts: allWebPost (filter: { website: { eq: true }}, sortBy: "date", order: DESC) {
+    webposts: allWebPost (filter: { website: { eq: true }}, limit:3, sortBy: "date", order: DESC) {
       edges {
         node {
           id
