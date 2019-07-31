@@ -2,7 +2,7 @@
   <Layout>
     <h1>All Blogs</h1>
     <ul>
-        <li v-for="edge in $page.posts.edges" :key="edge.node.title"><a v-bind:href="edge.node.path">{{ edge.node.title }}</a></li>
+        <li v-for="edge in $page.posts.edges" :key="edge.node.title"><a v-bind:href="edge.node.path">{{ edge.node.title }} - {{ edge.node.date }}</a></li>
     </ul>
   </Layout>
 </template>
@@ -24,7 +24,7 @@ export default {
           id
           title
           path
-          date (format: "D. MMMM YYYY")
+          date (format: "D MMMM YYYY")
           description
         }
       }
