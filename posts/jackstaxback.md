@@ -8,4 +8,4 @@ website: true
 
 ## JacksTaxBack.com
 
-Stuff goes here
+Stuff goes here about JTB
