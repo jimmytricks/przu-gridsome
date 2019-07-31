@@ -10,3 +10,4 @@ tech: HTML, CSS, SASS, JavaScript
 ## DidYouWatchTheGame.com
 
 Did you watch the game? Here is how it is built
+![Alternative text](../src/img/sites/didyouwatchthegame.jpg)
