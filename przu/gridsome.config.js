@@ -6,5 +6,22 @@
 
 module.exports = {
   siteName: 'Gridsome',
-  plugins: []
+  plugins: [
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'posts/*.md',
+        typeName: 'WebPost',
+        route: '/:slug',
+        // refs: {
+        //   typeName: 'Tag',
+        //   route: '/tag/:id',
+        //   create: true
+        // }
+      }
+    }
+  ],
+  transformers: {
+    remark: {}
+  },
 }
