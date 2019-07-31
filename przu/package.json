@@ -11,6 +11,9 @@
     "gridsome": "^0.6.0"
   },
   "devDependencies": {
-    "@gridsome/transformer-remark": "^0.3.2"
+    "@gridsome/transformer-remark": "^0.3.2",
+    "eslint": "^6.1.0",
+    "eslint-plugin-gridsome": "^1.2.6",
+    "vue-eslint-parser": "^6.0.4"
   }
 }
