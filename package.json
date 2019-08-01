@@ -8,7 +8,9 @@
   },
   "dependencies": {
     "@gridsome/source-filesystem": "^0.5.0",
-    "gridsome": "^0.6.0"
+    "gridsome": "^0.6.0",
+    "typeface-montserrat": "0.0.75",
+    "vue-svg-loader": "^0.12.0"
   },
   "devDependencies": {
     "@gridsome/transformer-remark": "^0.3.2",

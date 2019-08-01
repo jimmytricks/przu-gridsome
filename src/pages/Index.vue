@@ -1,8 +1,8 @@
 <template>
   <Layout>
     
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image alt="Example image" src="~/favicon.png" width="135" />
+    <logoSVG/>
+    <p>PRZU</p>
     
     <h1>Welcome to the PRZU</h1>
    
@@ -24,9 +24,13 @@
 </template>
 
 <script>
+import logoSVG from '~/assets/img/przu.svg'
 export default {
   metaInfo: {
     title: 'Hello, world!'
+  },
+  components: {
+    logoSVG
   }
 }
 </script>

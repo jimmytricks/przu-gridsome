@@ -10,7 +10,7 @@ tech: HTML, CSS, SASS, JavaScript
 ## DidYouWatchTheGame.com
 
 Did you watch the game? Here is how it is built
-![Alternative](../src/img/sites/didyouwatchthegame.jpg)
+![Alternative](../src/assets/img/sites/didyouwatchthegame.jpg)
 
 Could then use this:
 
