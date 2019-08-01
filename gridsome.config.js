@@ -25,12 +25,13 @@ module.exports = {
         path: 'posts/*.md',
         typeName: 'WebPost',
         route: '/:slug',
-        // refs: {
-        //   typeName: 'Tag',
-        //   route: '/tag/:id',
-        //   create: true
-        // }
       }
+    },
+    {
+      use: 'gridsome-plugin-tailwindcss',
+      // options: {
+      //   config: './some/file/js'
+      // }
     }
   ],
   transformers: {
