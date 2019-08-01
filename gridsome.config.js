@@ -24,7 +24,7 @@ module.exports = {
       options: {
         path: 'posts/*.md',
         typeName: 'WebPost',
-        route: '/:slug',
+        route: '/posts/:slug',
       }
     },
     {
