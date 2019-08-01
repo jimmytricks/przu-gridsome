@@ -1,19 +1,40 @@
 <template>
   <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metaData.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <logoSVG/>
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about">About</g-link>
-        <g-link class="nav__link" to="/posts">Posts</g-link>
-        <g-link class="nav__link" to="/blogs">Blogs</g-link>
-        <g-link class="nav__link" to="/websites">Websites</g-link>
-      </nav>
+    <header class="header py-2 px-12">
+      <section class="container header-container mx-auto">
+        <g-link to="/">
+          <logoSVG/>
+        </g-link>
+        <nav class="nav">        
+          <g-link class="nav-link" to="/">Home</g-link>
+          <g-link class="nav-link" to="/about">About</g-link>
+          <g-link class="nav-link" to="/blogs">Blog</g-link>
+          <g-link class="nav-link" to="/websites">Portfolio</g-link>
+          <g-link class="nav-link" to="/posts">All Posts</g-link>
+          <g-link class="nav-link" to="/websites">Contact</g-link>
+        </nav>
+      </section>
     </header>
-    <slot/>
+    <main class="content-wrapper container mx-auto px-12">
+      <slot/>
+    </main>
+    <footer>
+      <section class="container mx-auto px-12">
+        <div class="footer-container">
+          <div>
+            <h3>How did I build this site?</h3>
+            <p>Built with Gridsome framework on Vue.JS, using GraphQL. Read more.</p>
+          </div>
+          <div>
+            <h3>Disclaimer</h3>
+            <p>Please don't touch any of the animals living in the ZU, They may bite.</p>
+          </div>
+          <div>
+            <h3>© PRZU.COM – ALL RIGHTS RESERVED.</h3>
+          </div>
+        </div>
+      </section>
+    </footer>
   </div>
 </template>
 
@@ -37,30 +58,42 @@ query {
 }
 </static-query>
 
-<style>
+<style lang="scss">
+
+// *** Font
+
+a {
+  &:hover {
+    color: $color-secondary;
+  }
+}
+
+
+// *** General Layout
+
 body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
-  line-height: 1.5;
+    font-family: 'montserrat';
 }
 
-.layout {
-  max-width: 760px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
+// *** Header & nav section 
 .header {
+  background-color: $color-primary;
+  border-bottom: 1px solid black;
+  a {
+    color: white;
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+}
+
+.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
 }
 
-.nav__link {
+.nav-link {
   margin-left: 20px;
 }
 </style>
