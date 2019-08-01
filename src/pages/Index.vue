@@ -1,14 +1,11 @@
 <template>
   <Layout>
-    
-    <logoSVG/>
-    <p>PRZU</p>
-    
-    <h1>Welcome to the PRZU</h1>
-   
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-    </p>
+    <section class="page-text-content text-center home-text">
+      <h1>Welcome to the ZU</h1>
+      <logoSVG/>
+      <p>I am an English web designer and developer, moving from Vancouver, Canada to live in Edinburgh, UK.</p>
+      <p> Feel free to browse around the site or <g-link to="/contact">contact me</g-link> if you wish.</p>
+    </section>
 
     <h2>Latest Blog Posts</h2>
     <section class="blog-posts">
@@ -63,7 +60,9 @@ export default {
 </page-query>
 
 <style>
-.home-links a {
-  margin-right: 1rem;
+.home-text {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 </style>

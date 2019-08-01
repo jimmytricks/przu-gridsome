@@ -1,7 +1,7 @@
 <template>
   <div class="layout">
-    <header class="header px-12">
-      <section class="container header-container mx-auto py-4">
+    <header class="header py-4 px-12">
+      <section class="container header-container mx-auto">
         <g-link to="/">
           <logoSVG/>
         </g-link>
@@ -15,12 +15,12 @@
         </nav>
       </section>
     </header>
-    <main class="content-container py-2 px-12">
-      <section class="content-wrapper container mx-auto ">
+    <main class="content-container py-12 px-12">
+      <section class="content-wrapper container mx-auto">
         <slot/>
       </section>
     </main>
-    <footer class="footer py-8 px-12">
+    <footer class="footer py-6 px-12">
       <section class="container mx-auto footer-container">
         <div class="w-1/3">
           <p class="text-sm">This site is built with the <a href="https://gridsome.org/" target="_blank" class="link-exception">Gridsome</a> framework on <a href="https://vuejs.org/" target="_blank" class="link-exception">Vue.JS</a>, using GraphQL.</p>
@@ -65,9 +65,17 @@ p {
 
 a {
   color: $color-secondary;
+  border-bottom-width: 1px;
+  border-color: rgba($color-secondary, 0.3);
   &:hover {
     color: rgba($color-secondary,0.8);
   }
+}
+
+h1 {
+  color: $color-primary;
+  font-weight: 700;
+  font-size: 1.2em;
 }
 
 // *** Colours
@@ -80,11 +88,19 @@ a {
 // *** General Layout
 
 body {
-    font-family: 'montserrat';
+    font-family: 'montserrat', Arial;
 }
 
 .content-container {
   background-color: $color-tertiary;
+  a {
+    border-bottom-width: 1px;
+    border-color: rgba($color-four, 0.3);
+    color: $color-four;
+    &:hover {
+      color: rgba($color-four, 0.7);
+    }
+  }
 }
 
 // *** Header & nav section 
@@ -107,6 +123,11 @@ body {
     display: flex;
     flex-grow: 1;
   }
+}
+
+.page-text-content {
+  max-width: 640px;
+  margin: 0 auto;
 }
 
 .header-container {
