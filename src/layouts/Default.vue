@@ -1,7 +1,7 @@
 <template>
   <div class="layout">
     <header class="header py-2 px-12">
-      <section class="container header-container mx-auto">
+      <section class="container header-container mx-auto py-4">
         <g-link to="/">
           <logoSVG/>
         </g-link>
@@ -15,25 +15,23 @@
         </nav>
       </section>
     </header>
-    <main class="content-wrapper container mx-auto px-12">
-      <slot/>
-    </main>
-    <footer>
-      <section class="container mx-auto px-12">
-        <div class="footer-container">
-          <div>
-            <h3>How did I build this site?</h3>
-            <p>Built with Gridsome framework on Vue.JS, using GraphQL. Read more.</p>
-          </div>
-          <div>
-            <h3>Disclaimer</h3>
-            <p>Please don't touch any of the animals living in the ZU, They may bite.</p>
-          </div>
-          <div>
-            <h3>© PRZU.COM – ALL RIGHTS RESERVED.</h3>
-          </div>
-        </div>
+    <main class="content-container py-2 px-12">
+      <section class="content-wrapper container mx-auto ">
+        <slot/>
       </section>
+    </main>
+    <footer class="footer py-8 px-12">
+      <section class="container mx-auto footer-container">
+        <div>
+          <h3>How did I build this site?</h3>
+          <p>Built with Gridsome framework on Vue.JS, using GraphQL.</p>
+          <g-link to="/">Read more</g-link>          
+          </p>
+        </div>
+        <div>
+          <h3>© PRZU.COM – ALL RIGHTS RESERVED.</h3>
+        </div>
+    </section>
     </footer>
   </div>
 </template>
@@ -95,5 +93,22 @@ body {
 
 .nav-link {
   margin-left: 20px;
+}
+
+// *** Footer
+
+footer {
+  background-color: $color-primary;
+  color: white;
+  h3 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 </style>
