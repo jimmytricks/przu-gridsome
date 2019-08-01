@@ -1,6 +1,6 @@
 <template>
   <div class="layout">
-    <header class="header py-2 px-12">
+    <header class="header px-12">
       <section class="container header-container mx-auto py-4">
         <g-link to="/">
           <logoSVG/>
@@ -22,14 +22,13 @@
     </main>
     <footer class="footer py-8 px-12">
       <section class="container mx-auto footer-container">
-        <div>
-          <h3>How did I build this site?</h3>
-          <p>Built with Gridsome framework on Vue.JS, using GraphQL.</p>
-          <g-link to="/">Read more</g-link>          
-          </p>
+        <div class="w-1/3">
+          <p class="text-sm">This site is built with the <a href="https://gridsome.org/" target="_blank" class="link-exception">Gridsome</a> framework on <a href="https://vuejs.org/" target="_blank" class="link-exception">Vue.JS</a>, using GraphQL.</p>
+          <g-link to="/posts/przu" class="text-sm">Interested? I wrote about it here</g-link>
         </div>
-        <div>
-          <h3>© PRZU.COM – ALL RIGHTS RESERVED.</h3>
+        <div class="w-1/3">
+          <p class="text-sm font-bold">© PRZU.COM – All rights reserved.</p>
+          <p class="text-sm">Beware of animals in the ZU, they may bite.</p>          
         </div>
     </section>
     </footer>
@@ -60,10 +59,21 @@ query {
 
 // *** Font
 
+p {
+  font-size: 16px;
+}
+
 a {
+  color: $color-secondary;
   &:hover {
-    color: $color-secondary;
+    color: rgba($color-secondary,0.8);
   }
+}
+
+// *** Colours
+
+.link-exception {
+  color: #D5D5D5;
 }
 
 
@@ -71,6 +81,10 @@ a {
 
 body {
     font-family: 'montserrat';
+}
+
+.content-container {
+  background-color: $color-tertiary;
 }
 
 // *** Header & nav section 
@@ -82,6 +96,16 @@ body {
     &:hover {
       color: $color-secondary;
     }
+  }
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  .content-container {
+    display: flex;
+    flex-grow: 1;
   }
 }
 
