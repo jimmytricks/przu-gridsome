@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import logoSVG from '~/assets/img/przu.svg'
+import logoSVG from '~/assets/img/svg/przu.svg'
 export default {
   metaInfo: {
     title: 'Hello, world!'

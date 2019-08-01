@@ -5,6 +5,7 @@
         <g-link to="/">{{ $static.metaData.siteName }}</g-link>
       </strong>
       <nav class="nav">
+        <logoSVG/>
         <g-link class="nav__link" to="/">Home</g-link>
         <g-link class="nav__link" to="/about">About</g-link>
         <g-link class="nav__link" to="/posts">Posts</g-link>
@@ -15,6 +16,18 @@
     <slot/>
   </div>
 </template>
+
+<script>
+import logoSVG from '~/assets/img/svg/logo.svg'
+export default {
+  metaInfo: {
+    title: 'Hello, world!'
+  },
+  components: {
+    logoSVG
+  }
+}
+</script>
 
 <static-query>
 query {
