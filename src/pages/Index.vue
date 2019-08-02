@@ -7,7 +7,7 @@
         <p>I am an English web designer and developer, moving from Vancouver, Canada to live in Edinburgh, UK.</p>
         <p>
           Feel free to browse around the site or
-          <g-link to="/contact">contact me</g-link>if you'd like.
+          <g-link to="/contact">contact me</g-link> if you'd like.
         </p>
         <p>Have a great day!</p>
       </section>
@@ -21,11 +21,14 @@
           v-bind:key="post.node.title"
           class="w-1/3 mx-6 rounded overflow-hidden shadow-lg bg-white card-container"
         >
-          <div class="px-6 py-4">
-            <h3>{{ post.node.title }}</h3>
-            {{ post.node.date }}
-            <p class="desc">{{ post.node.description }}</p>
-          </div>
+          <g-link class="card-link" v-bind:to="post.node.path">
+            <div class="flex flex-col px-6 pt-4 pb-2">
+              <h3>{{ post.node.title }}</h3>
+              <p class="pt-0 date">{{ post.node.date }}</p>
+              <p class="desc">{{ post.node.description }}</p>
+            </div>
+            <p class="read-on px-6 py-4 bg-yellow">Read on...</p>
+          </g-link>
         </div>
       </div>
     </section>
@@ -38,14 +41,13 @@
           v-bind:key="post.node.title"
           class="w-1/3 mx-6 rounded overflow-hidden shadow-lg bg-white card-container"
         >
-          <a href="#" class="card-link image-and-title-container">
+          <g-link class="card-link" v-bind:to="post.node.path">
             <g-image :src="post.node.featureimg" />
             <div class="px-6 py-4">
               <h3>{{ post.node.title }}</h3>
-              <p class="date pt-0 text-sm">{{ post.node.date }}</p>
               <p class="desc">{{ post.node.description }}</p>
             </div>
-          </a>
+          </g-link>
           <div class="tag-container px-2 py-4">
             <span v-for="tech in post.node.tech" v-bind:key="tech.id" class="tech">{{ tech }}</span>
           </div>
@@ -109,10 +111,12 @@ export default {
   color: white;
 }
 
-.blog-posts {
-  background-color: white;
-}
 .card-container {
+  h3 {
+    color: $color-four;
+    line-height: normal;
+    padding-bottom: 4px;
+  }
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -147,6 +151,30 @@ export default {
   }
   .date {
     border-bottom: 1px solid $color-tertiary;
+    font-size: 0.8em;
+  }
+}
+
+.website-posts {
+  h3 {
+      border-bottom: 1px solid $color-tertiary;
+      padding-bottom: 4px;
+  }
+}
+
+.blog-posts {
+  background-color: white;
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .read-on {
+    font-weight: 500;
+    font-size: 0.9em;
+  }
+  a {
+    border: none;
   }
 }
 </style>
