@@ -4,7 +4,8 @@ module.exports = {
     colors: {
       yellow:'#ffd54f',
       black: '#353535',
-      lightgrey: '#f2f2f2'
+      lightgrey: '#f2f2f2',
+      white: '#fff',
     }
   },
   variants: {},
