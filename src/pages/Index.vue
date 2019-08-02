@@ -1,35 +1,66 @@
 <template>
   <Layout>
-    <section class="page-text-content text-center home-text">
-      <h1>Welcome to the ZU</h1>
-      <logoSVG/>
-      <p>I am an English web designer and developer, moving from Vancouver, Canada to live in Edinburgh, UK.</p>
-      <p> Feel free to browse around the site or <g-link to="/contact">contact me</g-link> if you wish.</p>
-    </section>
+    <div class="content-wrapper container mx-auto">
+      <section class="page-text-content text-center home-text">
+        <h1>Welcome to the ZU</h1>
+        <logoSVG />
+        <p>I am an English web designer and developer, moving from Vancouver, Canada to live in Edinburgh, UK.</p>
+        <p>
+          Feel free to browse around the site or
+          <g-link to="/contact">contact me</g-link>if you'd like.
+        </p>
+        <p>Have a great day!</p>
+      </section>
+    </div>
 
-    <h2>Latest Blog Posts</h2>
+    <h2 class="posts-header">Latest Blog Posts</h2>
     <section class="blog-posts">
-      <li v-for="post in $page.posts.edges" v-bind:key="post.node.title">{{ post.node.title }} - {{ post.node.date }}</li>
+      <div class="container mx-auto py-6">
+        <li
+          v-for="post in $page.posts.edges"
+          v-bind:key="post.node.title"
+        >{{ post.node.title }} - {{ post.node.date }}</li>
+      </div>
     </section>
 
-    <h2>Latest Website posts</h2>
+    <h2 class="posts-header">Latest Websites & Projects</h2>
     <section class="website-posts">
-        <li v-for="post in $page.webposts.edges" v-bind:key="post.node.title">{{ post.node.title }} - {{ post.node.date }}</li>
+      <div class="container mx-auto py-6 flex">
+        <!-- <li
+          v-for="post in $page.webposts.edges"
+          v-bind:key="post.node.title"
+        >{{ post.node.title }} - {{ post.node.date }}</li> -->
+        <div v-for="post in $page.webposts.edges"
+          v-bind:key="post.node.title" class="w-1/3 mx-6 rounded overflow-hidden shadow-lg bg-white">
+          <img class="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains">
+          <div class="px-6 py-4 bg-">
+            <div class="font-bold text-l mb-2">{{ post.node.title }}</div>
+            {{ post.node.date }}
+            <p class="">
+              {{ post.node.description }}
+            </p>
+          </div>
+          <div class="px-6 py-4">
+            <span class="tech">#Gridsome</span>
+            <span class="tech">#Vue</span>
+            <span class="tech">#GraphQL</span>
+          </div>
+        </div>
+      </div>
     </section>
-
   </Layout>
 </template>
 
 <script>
-import logoSVG from '~/assets/img/svg/przu.svg'
+import logoSVG from "~/assets/img/svg/przu.svg";
 export default {
   metaInfo: {
-    title: 'Hello, world!'
+    title: "Hello, world!"
   },
   components: {
     logoSVG
   }
-}
+};
 </script>
 
 <page-query>
@@ -59,10 +90,28 @@ export default {
   }
 </page-query>
 
-<style>
+<style lang="scss">
 .home-text {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+.posts-header {
+  text-align: center;
+  background-color: #353535;
+  color: white;
+}
+
+.blog-posts {
+  background-color: white;
+}
+
+.tech {
+  background-color: #ffd64e;
+  border-radius: 100px;
+  padding: 8px;
+  font-size: 0.8em;
+  margin: 4px;
 }
 </style>
