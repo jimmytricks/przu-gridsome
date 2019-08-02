@@ -139,9 +139,7 @@ export default {
   height: 100%;
   &:hover {
     background: rgba($color-tertiary, 0.5);
-  }
-  img:hover {
-    opacity: 0.5;
+    opacity: 0.8;
   }
   .desc,
   p {
