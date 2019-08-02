@@ -26,10 +26,6 @@
     <h2 class="posts-header">Latest Websites & Projects</h2>
     <section class="website-posts">
       <div class="container mx-auto py-6 flex">
-        <!-- <li
-          v-for="post in $page.webposts.edges"
-          v-bind:key="post.node.title"
-        >{{ post.node.title }} - {{ post.node.date }}</li> -->
         <div v-for="post in $page.webposts.edges"
           v-bind:key="post.node.title" class="w-1/3 mx-6 rounded overflow-hidden shadow-lg bg-white">
           <img class="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains">
@@ -41,11 +37,9 @@
             </p>
           </div>
           <div class="px-6 py-4">
-            <span class="tech">#Gridsome</span>
-            <span class="tech">#Vue</span>
-            <span class="tech">#GraphQL</span>
+            <span v-for="tech in post.node.tech" v-bind:key="tech.id" class="tech">{{ tech }}</span>
           </div>
-        </div>
+        </div>  
       </div>
     </section>
   </Layout>
@@ -73,6 +67,7 @@ export default {
           path
           date (format: "D MMMM YYYY")
           description
+          tech
         }
       }
     },
@@ -84,6 +79,7 @@ export default {
           path
           date (format: "D MMMM YYYY")
           description
+          tech
         }
       }
     }
