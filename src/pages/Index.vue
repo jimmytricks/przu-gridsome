@@ -15,11 +15,12 @@
 
     <h2 class="posts-header">Latest Blog Posts</h2>
     <section class="blog-posts">
-      <div class="container mx-auto py-12 pt-8 flex">
+      <div class="container mx-auto pt-8 flex">
+
         <div
           v-for="post in $page.posts.edges"
           v-bind:key="post.node.title"
-          class="w-1/3 mx-6 rounded overflow-hidden shadow-lg bg-white card-container"
+          class="w-1/3 mx-6 mb-6 rounded overflow-hidden shadow-lg bg-white card-container"
         >
           <g-link class="card-link" v-bind:to="post.node.path">
             <div class="flex flex-col px-6 pt-4 pb-2">
@@ -29,27 +30,41 @@
             </div>
             <p class="read-on px-6 py-3 bg-yellow">Read on...</p>
           </g-link>
+        </div>        
+      </div>
+      <div class="container mx-auto">
+        <div class="view-all mx-6 mb-6 text-right">
+          <g-link to="/posts" class="">View All Posts</g-link>
         </div>
       </div>
     </section>
 
     <h2 class="posts-header">Latest Websites & Projects</h2>
     <section class="website-posts">
-      <div class="container mx-auto py-12 flex">
+      <div class="container mx-auto pt-12 flex flex-wrap">
+
         <div
+          class="inner-card-container w-1/3 mb-8"
           v-for="post in $page.webposts.edges"
-          v-bind:key="post.node.title"
-          class="w-1/3 mx-6 rounded overflow-hidden shadow-lg bg-white card-container"
+          v-bind:key="post.node.id"
         >
-          <g-link class="card-link" v-bind:to="post.node.path">
-            <g-image :src="post.node.featureimg" />
-            <div class="px-6 py-4">
-              <h3>{{ post.node.title }}</h3>
-              <p class="desc">{{ post.node.description }}</p>
+          <div class="mx-6 rounded overflow-hidden shadow-lg bg-white h-full card-container">
+            <g-link class="card-link" v-bind:to="post.node.path">
+              <g-image :src="post.node.featureimg" />
+              <div class="px-6 py-4">
+                <h3>{{ post.node.title }}</h3>
+                <p class="desc">{{ post.node.description }}</p>
+              </div>
+            </g-link>
+            <div class="tag-container px-2 py-4">
+              <span v-for="tech in post.node.tech" v-bind:key="tech.id" class="tech">{{ tech }}</span>
             </div>
-          </g-link>
-          <div class="tag-container px-2 py-4">
-            <span v-for="tech in post.node.tech" v-bind:key="tech.id" class="tech">{{ tech }}</span>
+          </div>
+
+        </div>
+        <div class="container mx-auto">
+          <div class="view-all mx-6 mb-6 text-right">
+            <g-link to="/websites" class="">View All Websites & Projects</g-link>
           </div>
         </div>
       </div>
@@ -82,7 +97,7 @@ export default {
         }
       }
     },
-    webposts: allWebPost (filter: { website: { eq: true }}, limit:3, sortBy: "date", order: DESC) {
+    webposts: allWebPost (filter: { website: { eq: true }}, limit:6, sortBy: "date", order: DESC) {
       edges {
         node {
           id
@@ -157,14 +172,17 @@ export default {
 
 .website-posts {
   h3 {
-      border-bottom: 1px solid $color-tertiary;
-      padding-bottom: 4px;
+    border-bottom: 1px solid $color-tertiary;
+    padding-bottom: 4px;
   }
+  // .view-all a {
+  //   border-bottom: 1px solid rgba($color-four, 0.3)
+  // }
 }
 
 .blog-posts {
   background-color: white;
-  a {
+  a.card-link {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -178,5 +196,9 @@ export default {
   a {
     border: none;
   }
+  .view-all a {
+    border-bottom: 1px solid rgba($color-four, 0.3)
+  }
 }
+
 </style>

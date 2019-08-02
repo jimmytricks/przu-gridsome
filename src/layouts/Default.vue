@@ -90,6 +90,8 @@ h1 {
 
 h2 {
   @extend h1;
+    font-size: 1em;
+    font-weight: 600;
 }
 
 // *** Colours
