@@ -15,7 +15,7 @@
         </nav>
       </section>
     </header>
-    <main class="content-container py-4">
+    <main class="content-container">
       <slot />
     </main>
     <footer class="footer py-6 px-12">

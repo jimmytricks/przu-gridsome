@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div class="content-wrapper container mx-auto">
+    <div class="content-wrapper py-8 container mx-auto">
       <section class="page-text-content text-center home-text">
         <h1>Welcome to the ZU</h1>
         <logoSVG />
@@ -15,7 +15,7 @@
 
     <h2 class="posts-header">Latest Blog Posts</h2>
     <section class="blog-posts">
-      <div class="container mx-auto py-6 flex">
+      <div class="container mx-auto py-12 pt-8 flex">
         <div
           v-for="post in $page.posts.edges"
           v-bind:key="post.node.title"
@@ -27,7 +27,7 @@
               <p class="pt-0 date">{{ post.node.date }}</p>
               <p class="desc">{{ post.node.description }}</p>
             </div>
-            <p class="read-on px-6 py-4 bg-yellow">Read on...</p>
+            <p class="read-on px-6 py-3 bg-yellow">Read on...</p>
           </g-link>
         </div>
       </div>
@@ -35,7 +35,7 @@
 
     <h2 class="posts-header">Latest Websites & Projects</h2>
     <section class="website-posts">
-      <div class="container mx-auto py-6 flex">
+      <div class="container mx-auto py-12 flex">
         <div
           v-for="post in $page.webposts.edges"
           v-bind:key="post.node.title"
@@ -172,6 +172,8 @@ export default {
   .read-on {
     font-weight: 500;
     font-size: 0.9em;
+    border-top: 1px solid #eac652;
+    color: $color-primary;
   }
   a {
     border: none;
