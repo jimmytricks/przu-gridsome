@@ -1,7 +1,7 @@
 ---
 title: DidYouWatchTheGame.com
 date: 2018-12-01 07:42:34
-description: "Application built in vanilla JS, using NHL REST API to show upcoming fixtures, previous results and higlights for whichever team is selected, and the current standing of the relevant regional NHL table. "
+description: "Built in vanilla JS, uses the NHL REST API to show upcoming fixtures, previous results and higlights and table standings for all NHL teams. "
 slug: didyouwatchthegame
 website: true
 tech: ["HTML", "CSS", "SCSS", "JavaScript", "REST API"]
