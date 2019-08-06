@@ -1,17 +1,39 @@
 <template>
   <div class="layout">
-    <header class="header py-4 px-12">
-      <section class="container header-container mx-auto">
-        <g-link to="/">
-          <logoSVG />
-        </g-link>
-        <nav class="nav">
-          <g-link class="nav-link" to="/">Home</g-link>
-          <g-link class="nav-link" to="/about">About</g-link>
-          <g-link class="nav-link" to="/blogs">Blog</g-link>
-          <g-link class="nav-link" to="/websites">Portfolio</g-link>
-          <g-link class="nav-link" to="/websites">Contact</g-link>
-        </nav>
+    <header class="header py-4 px-12 sm:flex">
+      <section class="container mx-auto">
+        <div class="logo-and-header-container sm:flex justify-between">
+          <g-link to="/" class="exception-no-border">
+            <logoSVG />
+          </g-link>
+          <div class="block sm:hidden hamburger">
+            <button
+              @click="toggle"
+              class="flex items-center px-3 py-2 border rounded text-white hover:text-white hover:border-white"
+            >
+              <svg
+                class="fill-current h-3 w-3"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Menu</title>
+                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+              </svg>
+            </button>
+          </div>
+          <div
+            :class="open ? 'block': 'hidden'"
+            class="sm:flex sm:items-center sm:w-auto"
+          >
+            <div class="text-sm flex flex-col sm:block sm:flex-row">
+              <g-link class="nav-link py-1" to="/">Home</g-link>
+              <g-link class="nav-link py-1" to="/about">About</g-link>
+              <g-link class="nav-link py-1" to="/blogs">Blog</g-link>
+              <g-link class="nav-link py-1" to="/websites">Portfolio</g-link>
+              <g-link class="nav-link py-1" to="/contact">Contact</g-link>
+            </div>
+          </div>
+        </div>
       </section>
     </header>
     <main class="content-container">
@@ -22,7 +44,11 @@
         <div class="w-1/3">
           <p class="text-sm">
             This site is built with the
-            <a href="https://gridsome.org/" target="_blank" class="link-exception">Gridsome</a> framework on
+            <a
+              href="https://gridsome.org/"
+              target="_blank"
+              class="link-exception"
+            >Gridsome</a> framework on
             <a href="https://vuejs.org/" target="_blank" class="link-exception">Vue.JS</a>, using GraphQL.
           </p>
           <g-link to="/posts/przu" class="text-sm">Interested? I wrote about it here</g-link>
@@ -44,6 +70,16 @@ export default {
   },
   components: {
     logoSVG
+  },
+  data: function() {
+    return {
+      open: false
+    };
+  },
+  methods: {
+    toggle() {
+      this.open = !this.open;
+    }
   }
 };
 </script>
@@ -57,7 +93,6 @@ query {
 </static-query>
 
 <style lang="scss">
-
 body {
   font-family: "montserrat", Arial;
 }
@@ -89,8 +124,8 @@ h1 {
 
 h2 {
   @extend h1;
-    font-size: 1em;
-    font-weight: 600;
+  font-size: 1em;
+  font-weight: 600;
 }
 
 // *** Colours
@@ -119,10 +154,13 @@ h2 {
   border-bottom: 1px solid black;
   a {
     color: white;
-    border: none;
+    // border: none;
     &:hover {
       color: $color-secondary;
     }
+  }
+  .exception-no-border {
+    border: none!important;
   }
 }
 
@@ -142,15 +180,29 @@ h2 {
   margin: 0 auto;
 }
 
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+// .header-container {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+// }
 
 .nav-link {
-  margin-left: 20px;
+  margin-right: 20px;
 }
+
+// *** Navigation
+
+.hamburger {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+}
+
+.header a.active--exact {
+  color: $color-secondary;
+}
+
+
 
 // *** Shared component styling
 
@@ -216,7 +268,7 @@ h2 {
     border: none;
   }
   .view-all a {
-    border-bottom: 1px solid rgba($color-four, 0.3)
+    border-bottom: 1px solid rgba($color-four, 0.3);
   }
 }
 
