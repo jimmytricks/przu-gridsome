@@ -12,11 +12,15 @@
       <p class="p-0 text-xs mb-4 pb-4 border-btm">Last updated: {{ $page.post.date }}</p>
       <div v-if="$page.post.featureimg">
         <a v-bind:href="$page.post.websiteurl" class="card-link" target="_blank">
-          <g-image :src="$page.post.featureimg" class="shadow-lg"/>
+          <g-image :src="$page.post.featureimg" class="shadow-lg" />
         </a>
         <div class="link-container flex justify-between mt-2 border-btm pb-6 mb-2">
           <a v-bind:href="$page.post.websiteurl" target="_blank">View Site</a>
-          <a v-if="$page.post.sourceurl" v-bind:href="$page.post.sourceurl" target="_blank">View Source on GitHub</a>
+          <a
+            v-if="$page.post.sourceurl"
+            v-bind:href="$page.post.sourceurl"
+            target="_blank"
+          >View Source on GitHub</a>
         </div>
       </div>
 
@@ -51,9 +55,7 @@ export default {
 </page-query>
 
 <style scoped lang="scss">
-
 .border-btm {
   border-bottom: 1px solid #d4d4d4;
 }
-
 </style>

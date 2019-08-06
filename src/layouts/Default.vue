@@ -47,10 +47,10 @@
               class="link-exception"
             >Gridsome</a> framework on
             <a href="https://vuejs.org/" target="_blank" class="link-exception">Vue.JS</a>, using GraphQL.
-          </p>  
+          </p>
           <g-link to="/posts/przu" class="text-sm">Interested? I wrote about it here</g-link>
         </div>
-        <div class="sm:w-1/2  text-left sm:text-right lg:mx-6">
+        <div class="sm:w-1/2 text-left sm:text-right lg:mx-6">
           <p class="text-sm pb-0 font-bold">© PRZU.COM – All rights reserved.</p>
           <p class="text-sm p-0">Beware of animals in the ZU, they may bite.</p>
         </div>
