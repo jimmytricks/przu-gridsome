@@ -153,6 +153,25 @@ h2 {
   margin-left: 20px;
 }
 
+// *** Shared component styling
+
+.card-link {
+  display: block;
+  height: 100%;
+  &:hover {
+    background: rgba($color-tertiary, 0.5);
+    opacity: 0.8;
+  }
+  .desc,
+  p {
+    color: black;
+  }
+  .date {
+    border-bottom: 1px solid $color-tertiary;
+    font-size: 0.8em;
+  }
+}
+
 // *** Footer
 
 footer {

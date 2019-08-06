@@ -11,7 +11,7 @@
       </p>
       <p class="p-0 text-xs mb-4 pb-4 border-btm">Last updated: {{ $page.post.date }}</p>
       <div v-if="$page.post.featureimg">
-        <a v-bind:href="$page.post.websiteurl" target="_blank">
+        <a v-bind:href="$page.post.websiteurl" class="card-link" target="_blank">
           <g-image :src="$page.post.featureimg" class="shadow-lg"/>
         </a>
         <div class="link-container flex justify-between mt-2 border-btm pb-6 mb-2">
