@@ -126,34 +126,6 @@ export default {
   color: white;
 }
 
-.card-container {
-  h3 {
-    color: $color-four;
-    line-height: normal;
-    padding-bottom: 4px;
-  }
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  .desc {
-    font-size: 0.8em;
-  }
-  .tag-container {
-    text-align: center;
-    background-color: $color-tertiary;
-    .tech {
-      background-color: #ffd64e;
-      border-radius: 100px;
-      padding: 6px;
-      font-size: 0.6em;
-      margin: 4px;
-      display: inline-block;
-      font-weight: 600;
-      text-transform: uppercase;
-    }
-  }
-}
-
 
 .website-posts {
   h3 {
@@ -165,25 +137,5 @@ export default {
   // }
 }
 
-.blog-posts {
-  background-color: white;
-  a.card-link {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .read-on {
-    font-weight: 500;
-    font-size: 0.9em;
-    border-top: 1px solid #eac652;
-    color: $color-primary;
-  }
-  a {
-    border: none;
-  }
-  .view-all a {
-    border-bottom: 1px solid rgba($color-four, 0.3)
-  }
-}
 
 </style>
