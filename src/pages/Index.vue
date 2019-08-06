@@ -7,17 +7,17 @@
         <p>I am an English web designer and developer, moving from Vancouver, Canada to live in Edinburgh, UK.</p>
         <p>
           Feel free to browse around the site or
-          <g-link to="/contact">contact me</g-link> if you'd like.
+          <g-link to="/contact">contact me</g-link>if you'd like.
         </p>
         <p>Have a great day!</p>
       </section>
     </div>
 
     <h2 class="posts-header">Latest Blog Posts</h2>
- <section class="blog-posts">
+    <section class="blog-posts">
       <div class="container mx-auto pt-8 flex flex-wrap">
         <div
-          class="inner-card-container w-full sm:w-1/2 md:w-1/3 mb-8"
+          class="inner-card-container w-full sm:w-1/2 lg:w-1/3 mb-8"
           v-for="post in $page.posts.edges"
           v-bind:key="post.node.title"
         >
@@ -35,7 +35,7 @@
       </div>
       <div class="container mx-auto">
         <div class="view-all mx-6 mb-6 text-right">
-          <g-link to="/posts" class="">View All Posts</g-link>
+          <g-link to="/posts" class>View All Posts</g-link>
         </div>
       </div>
     </section>
@@ -43,9 +43,8 @@
     <h2 class="posts-header">Latest Websites & Projects</h2>
     <section class="website-posts">
       <div class="container mx-auto pt-12 flex flex-wrap justify-center">
-
         <div
-          class="inner-card-container w-full sm:w-1/2 md:w-1/3 mb-8"
+          class="inner-card-container w-full sm:w-1/2 lg:w-1/3 mb-8"
           v-for="post in $page.webposts.edges"
           v-bind:key="post.node.id"
         >
@@ -61,11 +60,10 @@
               <span v-for="tech in post.node.tech" v-bind:key="tech.id" class="tech">{{ tech }}</span>
             </div>
           </div>
-
         </div>
         <div class="container mx-auto">
           <div class="view-all mx-6 mb-6 text-right">
-            <g-link to="/websites" class="">View All Websites & Projects</g-link>
+            <g-link to="/websites" class>View All Websites & Projects</g-link>
           </div>
         </div>
       </div>
@@ -126,6 +124,4 @@ export default {
   background-color: #353535;
   color: white;
 }
-
-
 </style>

@@ -2,9 +2,9 @@
   <Layout>
     <h1 class="text-center">All Websites & Projects</h1>
     <section class="website-posts bg-white">
-      <div class="container mx-auto pt-12 flex flex-wrap">
+      <div class="container mx-auto pt-6 md:pt-8 flex flex-wrap">
         <div
-          class="inner-card-container w-1/3 mb-16"
+          class="inner-card-container w-full sm:w-1/2 lg:w-1/3 mb-8 md:mb-16"
           v-for="post in $page.posts.edges"
           v-bind:key="post.node.id"
         >
@@ -54,5 +54,4 @@ export default {
 </page-query>
 
 <style scoped lang="scss">
-
 </style>
