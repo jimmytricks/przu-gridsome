@@ -144,11 +144,12 @@ export default {
     .tech {
       background-color: #ffd64e;
       border-radius: 100px;
-      padding: 8px;
-      font-size: 0.8em;
+      padding: 6px;
+      font-size: 0.6em;
       margin: 4px;
       display: inline-block;
-      font-weight: 500;
+      font-weight: 600;
+      text-transform: uppercase;
     }
   }
 }

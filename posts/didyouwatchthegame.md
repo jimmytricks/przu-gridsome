@@ -4,7 +4,7 @@ date: 2018-12-01 07:42:34
 description: "Built in vanilla JS, uses the NHL REST API to show upcoming fixtures, previous results and higlights and table standings for all NHL teams. "
 slug: didyouwatchthegame
 website: true
-tech: ["HTML", "CSS", "SCSS", "JavaScript", "REST API"]
+tech: ["HTML", "CSS", "SCSS", "JavaScript"]
 featureimg: "../src/assets/img/sites/didyouwatchthegame.jpg"
 ---
 
