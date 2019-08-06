@@ -1,8 +1,8 @@
 <template>
   <div class="layout">
-    <header class="header py-4 px-12 sm:flex">
+    <header class="header py-4 px-4 sm:px-12 sm:flex">
       <section class="container mx-auto">
-        <div class="logo-and-header-container sm:flex justify-between">
+        <nav class="logo-and-header-container sm:flex justify-between">
           <g-link to="/" class="exception-no-border">
             <logoSVG />
           </g-link>
@@ -21,10 +21,7 @@
               </svg>
             </button>
           </div>
-          <div
-            :class="open ? 'block': 'hidden'"
-            class="sm:flex sm:items-center sm:w-auto"
-          >
+          <div :class="open ? 'block': 'hidden'" class="sm:flex sm:items-center sm:w-auto">
             <div class="text-sm flex flex-col sm:block sm:flex-row">
               <g-link class="nav-link py-1" to="/">Home</g-link>
               <g-link class="nav-link py-1" to="/about">About</g-link>
@@ -33,15 +30,15 @@
               <g-link class="nav-link py-1" to="/contact">Contact</g-link>
             </div>
           </div>
-        </div>
+        </nav>
       </section>
     </header>
     <main class="content-container">
       <slot />
     </main>
-    <footer class="footer py-6 px-12">
-      <section class="container mx-auto footer-container">
-        <div class="w-1/3">
+    <footer class="footer py-4 px-4 md:px-12">
+      <section class="container mx-auto footer-container flex-col sm:flex-row">
+        <div class="w-full sm:w-1/3">
           <p class="text-sm">
             This site is built with the
             <a
@@ -50,10 +47,10 @@
               class="link-exception"
             >Gridsome</a> framework on
             <a href="https://vuejs.org/" target="_blank" class="link-exception">Vue.JS</a>, using GraphQL.
-          </p>
+          </p>  
           <g-link to="/posts/przu" class="text-sm">Interested? I wrote about it here</g-link>
         </div>
-        <div class="w-1/3">
+        <div class="w-full sm:w-1/3 text-left sm:text-right">
           <p class="text-sm font-bold">© PRZU.COM – All rights reserved.</p>
           <p class="text-sm">Beware of animals in the ZU, they may bite.</p>
         </div>
@@ -154,13 +151,12 @@ h2 {
   border-bottom: 1px solid black;
   a {
     color: white;
-    // border: none;
     &:hover {
       color: $color-secondary;
     }
   }
   .exception-no-border {
-    border: none!important;
+    border: none !important;
   }
 }
 
@@ -180,12 +176,6 @@ h2 {
   margin: 0 auto;
 }
 
-// .header-container {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-// }
-
 .nav-link {
   margin-right: 20px;
 }
@@ -201,8 +191,6 @@ h2 {
 .header a.active--exact {
   color: $color-secondary;
 }
-
-
 
 // *** Shared component styling
 
@@ -223,7 +211,13 @@ h2 {
   }
 }
 
+.inner-card-container {
+  display: flex;
+  justify-content: center;
+}
+
 .card-container {
+  max-width: 400px;
   h3 {
     color: $color-four;
     line-height: normal;

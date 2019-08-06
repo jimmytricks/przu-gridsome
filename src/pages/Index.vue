@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div class="content-wrapper py-8 container mx-auto">
+    <div class="content-wrapper py-8 px-4 container mx-auto">
       <section class="page-text-content text-center home-text">
         <h1>Welcome to the ZU</h1>
         <logoSVG />
@@ -14,23 +14,24 @@
     </div>
 
     <h2 class="posts-header">Latest Blog Posts</h2>
-    <section class="blog-posts">
-      <div class="container mx-auto pt-8 flex">
-
+ <section class="blog-posts">
+      <div class="container mx-auto pt-8 flex flex-wrap">
         <div
+          class="inner-card-container w-full sm:w-1/2 md:w-1/3 mb-8"
           v-for="post in $page.posts.edges"
           v-bind:key="post.node.title"
-          class="w-1/3 mx-6 mb-6 rounded overflow-hidden shadow-lg bg-white card-container"
         >
-          <g-link class="card-link" v-bind:to="post.node.path">
-            <div class="flex flex-col px-6 pt-4 pb-2">
-              <h3>{{ post.node.title }}</h3>
-              <p class="pt-0 date">{{ post.node.date }}</p>
-              <p class="desc">{{ post.node.description }}</p>
-            </div>
-            <p class="read-on px-6 py-3 bg-yellow">Read on...</p>
-          </g-link>
-        </div>        
+          <div class="mx-6 mb-6 rounded overflow-hidden shadow-lg bg-white h-full card-container">
+            <g-link class="card-link" v-bind:to="post.node.path">
+              <div class="flex flex-col px-6 pt-4 pb-2">
+                <h3>{{ post.node.title }}</h3>
+                <p class="pt-0 date">{{ post.node.date }}</p>
+                <p class="desc">{{ post.node.description }}</p>
+              </div>
+              <p class="read-on px-6 py-3 bg-yellow">Read on...</p>
+            </g-link>
+          </div>
+        </div>
       </div>
       <div class="container mx-auto">
         <div class="view-all mx-6 mb-6 text-right">
@@ -41,10 +42,10 @@
 
     <h2 class="posts-header">Latest Websites & Projects</h2>
     <section class="website-posts">
-      <div class="container mx-auto pt-12 flex flex-wrap">
+      <div class="container mx-auto pt-12 flex flex-wrap justify-center">
 
         <div
-          class="inner-card-container w-1/3 mb-8"
+          class="inner-card-container w-full sm:w-1/2 md:w-1/3 mb-8"
           v-for="post in $page.webposts.edges"
           v-bind:key="post.node.id"
         >

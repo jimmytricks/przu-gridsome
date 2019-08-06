@@ -1,6 +1,6 @@
 <template>
   <layout>
-    <section class="page-text-content container posts-page py-12">
+    <section class="page-text-content container posts-page px-4 py-8">
       <h1 class="pb-0">{{ $page.post.title }}</h1>
       <p v-if="$page.post.tech.length" class="p-0 text-xs">
         Category:

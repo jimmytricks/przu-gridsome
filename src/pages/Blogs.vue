@@ -4,7 +4,7 @@
     <section class="blog-posts">
       <div class="container mx-auto pt-8 flex flex-wrap">
         <div
-          class="inner-card-container w-1/3 mb-8"
+          class="inner-card-container w-full sm:w-1/3 mb-8"
           v-for="post in $page.posts.edges"
           v-bind:key="post.node.title"
         >
