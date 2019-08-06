@@ -5,14 +5,14 @@ description: Built in vanilla JS, uses the NHL REST API to show upcoming fixture
 slug: didyouwatchthegame
 website: true
 websiteurl: https://DidYouWatchTheGame.com
-sourceurl: https://https://github.com/jimmytricks/CanucksHockey
+sourceurl: https://github.com/jimmytricks/CanucksHockey
 tech: ["HTML", "CSS", "SCSS", "JavaScript"]
 featureimg: ../src/assets/img/sites/didyouwatchthegame.jpg
 ---
 
 ## DidYouWatchTheGame.com
 
-Did you watch the game? Here is how it is built
+Image example
 ![Alternative](../src/assets/img/sites/didyouwatchthegame.jpg)
 
 Could then use this:

@@ -7,7 +7,7 @@
         <p>I am an English web designer and developer, moving from Vancouver, Canada to live in Edinburgh, UK.</p>
         <p>
           Feel free to browse around the site or
-          <g-link to="/contact">contact me</g-link>if you'd like.
+          <g-link to="/contact">contact me</g-link> if you'd like.
         </p>
         <p>Have a great day!</p>
       </section>
