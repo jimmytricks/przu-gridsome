@@ -2,7 +2,7 @@
   <div class="layout">
     <header class="header py-4 px-4 sm:px-12 sm:flex">
       <section class="container mx-auto">
-        <nav class="logo-and-header-container sm:flex justify-between">
+        <nav class="logo-and-header-container sm:flex justify-between lg:mx-6">
           <g-link to="/" class="exception-no-border">
             <logoSVG />
           </g-link>
@@ -38,7 +38,7 @@
     </main>
     <footer class="footer py-4 px-4 md:px-12">
       <section class="container mx-auto footer-container flex-col sm:flex-row">
-        <div class="w-full sm:w-1/3">
+        <div class="sm:w-1/3 lg:mx-6">
           <p class="text-sm">
             This site is built with the
             <a
@@ -50,9 +50,9 @@
           </p>  
           <g-link to="/posts/przu" class="text-sm">Interested? I wrote about it here</g-link>
         </div>
-        <div class="w-full sm:w-1/3 text-left sm:text-right">
-          <p class="text-sm font-bold">© PRZU.COM – All rights reserved.</p>
-          <p class="text-sm">Beware of animals in the ZU, they may bite.</p>
+        <div class="sm:w-1/2  text-left sm:text-right lg:mx-6">
+          <p class="text-sm pb-0 font-bold">© PRZU.COM – All rights reserved.</p>
+          <p class="text-sm p-0">Beware of animals in the ZU, they may bite.</p>
         </div>
       </section>
     </footer>
@@ -172,7 +172,7 @@ h2 {
 }
 
 .page-text-content {
-  max-width: 640px;
+  max-width: 680px;
   margin: 0 auto;
 }
 
