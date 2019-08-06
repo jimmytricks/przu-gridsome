@@ -113,7 +113,7 @@ export default {
   }
 </page-query>
 
-<style lang="scss">
+<style scoped lang="scss">
 .home-text {
   display: flex;
   align-items: center;
@@ -124,17 +124,6 @@ export default {
   text-align: center;
   background-color: #353535;
   color: white;
-}
-
-
-.website-posts {
-  h3 {
-    border-bottom: 1px solid $color-tertiary;
-    padding-bottom: 4px;
-  }
-  // .view-all a {
-  //   border-bottom: 1px solid rgba($color-four, 0.3)
-  // }
 }
 
 

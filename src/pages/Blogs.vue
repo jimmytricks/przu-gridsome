@@ -50,3 +50,10 @@ export default {
     }
   }
 </page-query>
+
+<style scoped lang="scss">
+.blog-posts {
+  background-color: $color-tertiary;
+}
+
+</style>

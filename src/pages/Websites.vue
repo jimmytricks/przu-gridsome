@@ -1,23 +1,42 @@
 <template>
   <Layout>
-    <h1>All Websites</h1>
-    <ul>
-        <li v-for="edge in $page.posts.edges" :key="edge.node.title"><a v-bind:href="edge.node.path">{{ edge.node.title }} - {{edge.node.date}}</a></li>
-    </ul>
+    <h1 class="text-center">All Websites & Projects</h1>
+    <section class="website-posts bg-white">
+      <div class="container mx-auto pt-12 flex flex-wrap">
+        <div
+          class="inner-card-container w-1/3 mb-16"
+          v-for="post in $page.posts.edges"
+          v-bind:key="post.node.id"
+        >
+          <div class="mx-6 rounded overflow-hidden shadow-lg bg-white h-full card-container">
+            <g-link class="card-link" v-bind:to="post.node.path">
+              <g-image :src="post.node.featureimg" />
+              <div class="px-6 py-4">
+                <h3>{{ post.node.title }}</h3>
+                <p class="desc">{{ post.node.description }}</p>
+              </div>
+            </g-link>
+            <div class="tag-container px-2 py-4">
+              <span v-for="tech in post.node.tech" v-bind:key="tech.id" class="tech">{{ tech }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </Layout>
 </template>
 
 <script>
 export default {
   metaInfo: {
-    title: 'List of Websites'
+    title: "List of Websites"
   }
-}
+};
 </script>
 
 
 <page-query>
-  query websitePosts {
+  query webPosts {
     posts: allWebPost (filter: { website: { eq: true }}, sortBy: "date", order: DESC) {
       edges {
         node {
@@ -26,8 +45,14 @@ export default {
           path
           date (format: "D MMMM YYYY")
           description
+          tech
+          featureimg (width: 400, height: 240, quality: 90)
         }
       }
     }
   }
 </page-query>
+
+<style scoped lang="scss">
+
+</style>

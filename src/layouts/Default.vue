@@ -10,7 +10,6 @@
           <g-link class="nav-link" to="/about">About</g-link>
           <g-link class="nav-link" to="/blogs">Blog</g-link>
           <g-link class="nav-link" to="/websites">Portfolio</g-link>
-          <g-link class="nav-link" to="/posts">All Posts</g-link>
           <g-link class="nav-link" to="/websites">Contact</g-link>
         </nav>
       </section>
@@ -218,6 +217,13 @@ h2 {
   }
   .view-all a {
     border-bottom: 1px solid rgba($color-four, 0.3)
+  }
+}
+
+.website-posts {
+  h3 {
+    border-bottom: 1px solid $color-tertiary;
+    padding-bottom: 4px;
   }
 }
 

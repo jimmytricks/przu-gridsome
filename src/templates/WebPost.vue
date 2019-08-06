@@ -50,7 +50,7 @@ export default {
     }
 </page-query>
 
-<style lang="scss">
+<style scoped lang="scss">
 
 .border-btm {
   border-bottom: 1px solid #d4d4d4;
