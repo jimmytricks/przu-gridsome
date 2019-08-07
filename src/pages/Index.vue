@@ -105,7 +105,7 @@ export default {
           date (format: "D MMMM YYYY")
           description
           tech
-          featureimg (width: 400, height: 240, quality: 90)
+          featureimg (width: 400, height: 240, quality: 100)
         }
       }
     }

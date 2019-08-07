@@ -5,7 +5,7 @@ description: "Google Sheet powered database with Vue frontend, displaying friend
 slug: lanchnation
 website: true
 tech: ["Vue", "Google Sheets", "JavaScript"]
-featureimg: "../src/assets/img/sites/didyouwatchthegame.jpg"
+featureimg: "../src/assets/img/sites/lanchnation.png"
 ---
 
 ## The making of Lanch Nation
