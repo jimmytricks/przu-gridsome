@@ -12,8 +12,6 @@ featureimg: ../src/assets/img/sites/didyouwatchthegame.jpg
 
 ## DidYouWatchTheGame.com
 
-Image example
-![Alternative](../src/assets/img/sites/didyouwatchthegame.jpg)
 
 Could then use this:
 

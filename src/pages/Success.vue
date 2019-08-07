@@ -11,7 +11,7 @@
 <script>
 export default {
   metaInfo: {
-    title: "Success, email sent"
+    title: "Success, your email sent"
   }
 };
 </script>
