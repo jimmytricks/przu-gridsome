@@ -5,7 +5,7 @@ description: "Vanilla JS application, uses the NHL API to randomly selects playe
 slug: randomhockeyplayer
 website: true
 tech: ["JavaScript", "SCSS"]
-featureimg: "./imgs/randomhockeyplayer.png"
+featureimg: "./imgs/randomhockeyplayer1.png"
 ---
 
 ## What is it?

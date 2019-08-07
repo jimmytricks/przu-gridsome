@@ -5,7 +5,7 @@ description: "Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, eni
 slug: jtbaccountingservices
 website: true
 tech: ["HTML", "CSS", "SCSS", "PHP"]
-featureimg: "./imgs/didyouwatchthegame.jpg"
+featureimg: "./imgs/didyouwatchthegame1.jpg"
 ---
 
 ## jtbaccountingservices.com

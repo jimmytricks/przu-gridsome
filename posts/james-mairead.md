@@ -5,7 +5,7 @@ description: "Wedding site built with my own webpack starter, utilizing Tailwind
 slug: james-mairead
 website: true
 tech: ["HTML", "SCSS", "Tailwind", "Webpack"]
-featureimg: "./imgs/jamesandmairead.png"
+featureimg: "./imgs/jamesandmairead1.png"
 ---
 
 ## The making of JamesandMairead.com
