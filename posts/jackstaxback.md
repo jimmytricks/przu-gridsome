@@ -5,7 +5,7 @@ description: "A WordPress site, with modified theme and custom Stripe integratio
 slug: jackstaxback
 website: true
 tech: ["WordPress", "PHP", "cURL"]
-featureimg: "../src/assets/img/sites/jtb.jpg"
+featureimg: "./sitesjtb.jpg"
 ---
 
 ## JacksTaxBack.com

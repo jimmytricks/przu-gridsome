@@ -7,7 +7,7 @@ website: true
 websiteurl: https://DidYouWatchTheGame.com
 sourceurl: https://github.com/jimmytricks/CanucksHockey
 tech: ["HTML", "CSS", "SCSS", "JavaScript"]
-featureimg: ../src/assets/img/sites/didyouwatchthegame.jpg
+featureimg: ./sitesdidyouwatchthegame.jpg
 ---
 
 ## DidYouWatchTheGame.com

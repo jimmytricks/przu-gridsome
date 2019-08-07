@@ -5,7 +5,7 @@ description: "How I created PRZU, using Vue and Gridsome (with GraphQL and Markd
 slug: przu
 website: true
 tech: ["Vue", "Gridsome", "GraphQL"]
-featureimg: "../src/assets/img/sites/przu.png"
+featureimg: "./sitesprzu.png"
 ---
 
 ## The making of PRZU.com
