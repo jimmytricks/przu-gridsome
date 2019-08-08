@@ -1,13 +1,17 @@
 ---
 title: jtbaccountingservices.com
-date: 2017-09-01 07:42:34
-description: "Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet."
+date: 2017-06-29
+description: Website with no libraries or frameworks, incorporating SCSS, HTML and PHP
 slug: jtbaccountingservices
 website: true
+websiteurl: https://www.jtbaccountingservices.com/
+sourceurl: https://github.com/jimmytricks/JTB-Accounting-Services
 tech: ["HTML", "CSS", "SCSS", "PHP"]
-featureimg: "./imgs/didyouwatchthegame1.jpg"
+featureimg: "./imgs/jtbas.png"
 ---
 
-## jtbaccountingservices.com
+## Overview
 
-Website for accounting individual code from scratch with no frameworks, incorporating CSS (SASS) and HTML, with PHP used for the email form.
+Website for an accountant who wanted a simple but modern design. 
+
+The site uses no libraries or frameworks, being completed solely in SCSS, HTML and with PHP to create an email form for the client. 

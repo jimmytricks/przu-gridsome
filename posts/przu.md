@@ -1,14 +1,21 @@
 ---
 title: Przu.com
-date: 2018-05-15 07:42:34
-description: "How I created PRZU, using Vue and Gridsome (with GraphQL and Markdown support)"
+date: 2019-08-08
+description: My portfolio and blog site, built with Vue and Gridsome (with GraphQL and Markdown support)
 slug: przu
 website: true
-tech: ["Vue", "Gridsome", "GraphQL"]
+websiteurl: https://przu.com
+sourceurl: https://github.com/jimmytricks/przu-gridsome
+tech: ["Vue", "Gridsome", "GraphQL", "Netlify", "Tailwind"]
 featureimg: "./imgs/przu1.png"
 ---
 
-## The making of PRZU.com
+## Overview 
 
-Info on how PRZU was made
-`code example`
+PRZU is my personal portfolio, project and blog site. Originally created in WordPress, I set out to rebuild it in the [JAMStack](https://jamstack.org/), using [Vue], [Gridsome] and [Tailwind], then deploying it with [Netlify]. 
+
+The website uses markdown files for the blog and website posts, with GraphQL providing the data layer. This makes it fast, secure and super easy to update. All that is required is a new markdown file to be committed to my GitHub repo and Netlify will automatically start the build process and have it live in no time. 
+
+I wrote a more [detailed post here] on how I created the site. 
+
+JAMStack is awesome, give it a try.

@@ -1,16 +1,18 @@
 ---
 title: JamesandMairead.com
-date: 2018-05-15 07:42:34
-description: "Wedding site built with my own webpack starter, utilizing Tailwind CSS library"
+date: 2019-08-06
+description: Wedding site built with my own webpack starter, utilizing Tailwind CSS library
 slug: james-mairead
 website: true
+websiteurl: https://www.jamesandmairead.com
+sourceurl: https://github.com/jimmytricks/mjwedding
 tech: ["HTML", "SCSS", "JavaScript", "Tailwind", "Webpack"]
 featureimg: "./imgs/jmwedding.png"
 ---
 
 ## Overview
 
-This site was built using my own webpack4 boiler plate, Tailwind CSS and some vanilla JavaScript.
+This site was built using my own [webpack4](https://github.com/jimmytricks/webpack4-starter) boiler plate (a work in progress, use with caution!), [Tailwind CSS](https://tailwindcss.com/) and a splash of vanilla JavaScript.
 
 ## Webpack
 
@@ -23,7 +25,7 @@ First time configuring and using my own webpack4 setup. There are still some asp
 * Normalize.css
 * SCSS integration
 
-## Features
+## Site Features
 
 * Use of MutationObserver API to monitor and change MailChimp success message
-* Vanilla JavaScript countdown
+* Vanilla JavaScript countdown timer

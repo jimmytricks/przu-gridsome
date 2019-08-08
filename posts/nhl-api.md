@@ -4,7 +4,7 @@ date: 2019-07-07 07:42:34
 description: "What I learnt working with the NHL API to create a couple of personal projects"
 slug: working-with-nhl-api
 blogpost: true
-tech: ["REST API","ES6"]
+tech: ["REST API","JavaScript", "Postman"]
 ---
 
 ## What I learnt

@@ -20,7 +20,7 @@ module.exports = {
   siteName: 'PRZU.com - Welcome to the ZU',
   siteUrl: 'https://przu.com',
   icon: {
-    favicon: './src/assets/favicon.png',
+    favicon: './src/assets/img/favicon.png',
   },
   plugins: [
     {
