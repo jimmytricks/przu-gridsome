@@ -111,6 +111,12 @@ a {
   }
 }
 
+li {
+  list-style: disc inside;
+  padding: 2px 20px;
+  font-size: 0.9em
+}
+
 h1 {
   color: $color-primary;
   font-weight: 700;
@@ -272,6 +278,29 @@ h2 {
     padding-bottom: 4px;
   }
 }
+// *** Posts Page
+
+.posts-page {
+    h2 {
+    margin-top: 20px;
+  }
+  ul {
+    margin: 10px 0
+  }
+  code {
+    font-size: 0.9em;
+    background-color: #272822;
+    color: #f8f8f2;
+    border-radius: 0.3rem;
+    padding: 4px 5px 5px;    
+  }
+  pre {
+    code {
+      display: block;
+      overflow: scroll;
+    }
+  }
+} 
 
 // *** Footer
 
