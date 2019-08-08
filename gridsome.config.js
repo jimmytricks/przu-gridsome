@@ -6,7 +6,7 @@
 
 const path = require('path')
 
-function addStyleResource (rule) {
+function addStyleResource(rule) {
   rule.use('style-resource')
     .loader('style-resources-loader')
     .options({
@@ -17,7 +17,11 @@ function addStyleResource (rule) {
 }
 
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'PRZU.com - Welcome to the ZU',
+  siteUrl: 'https://przu.com',
+  icon: {
+    favicon: './src/assets/favicon.png',
+  },
   plugins: [
     {
       use: '@gridsome/source-filesystem',
@@ -34,10 +38,10 @@ module.exports = {
   transformers: {
     remark: {}
   },
-  chainWebpack (config) {
+  chainWebpack(config) {
     // Load variables for all vue-files
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
-    
+
     types.forEach(type => {
       addStyleResource(config.module.rule('scss').oneOf(type))
     })
@@ -47,5 +51,5 @@ module.exports = {
     svgRule
       .use('vue-svg-loader')
       .loader('vue-svg-loader')
-	}
+  }
 }

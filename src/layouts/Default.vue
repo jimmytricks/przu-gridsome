@@ -63,7 +63,7 @@
 import logoSVG from "~/assets/img/svg/logo.svg";
 export default {
   metaInfo: {
-    title: "Hello, world!"
+    title: "PRZU.com - Welcome to the ZU"
   },
   components: {
     logoSVG
