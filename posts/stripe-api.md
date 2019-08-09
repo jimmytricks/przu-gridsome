@@ -1,7 +1,7 @@
 ---
 title: Working with Stripe's API
 date: 2018-09-15 07:42:34
-description: "Implementing a PHP and cURL approach to using the Stripe API, in order to customize checkout and use the elements.js libary"
+description: Implementing a PHP and cURL approach to using the Stripe API, in order to customize checkout and use the elements.js libary
 slug: stripe-api-custom-amount
 blogpost: true
 ---

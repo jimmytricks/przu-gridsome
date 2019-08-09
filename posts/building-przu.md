@@ -1,7 +1,7 @@
 ---
 title: How I built PRZU.com with Gridsome, Vue and GraphQL
 date: 2019-04-07 07:42:34
-description: "Gridsome is a fantastic tool for creating static sites. Here is a write up of the steps I took"
+description: Gridsome is a fantastic tool for creating static sites. Here is brief write up of how I created PRZU.com 
 slug: building-przu
 blogpost: true
 ---
