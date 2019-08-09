@@ -19,25 +19,28 @@
         </p>
         <div class="sender-info">
           <div>
-            <label for="name" class="label">Your name</label>
+            <label for="name" class="label block">Your name</label>
             <input type="text" name="name" v-model="formData.name" />
           </div>
           <div>
-            <label for="email">Your email</label>
+            <label for="email" class="block">Your email</label>
             <input type="email" name="email" v-model="formData.email" />
           </div>
         </div>
 
         <div class="message-wrapper">
-          <label for="message">Message</label>
+          <label for="message" class="block">Message</label>
           <textarea name="message" v-model="formData.message"></textarea>
         </div>
 
-        <button type="submit">Submit form</button>
+        <button type="submit" class="p-4 bg-yellow uppercase font-bold">Talk to me!</button>
       </form>
     </section>
+    
   </Layout>
 </template>
+
+
 
 <script>
 export default {
@@ -72,3 +75,17 @@ export default {
   }
 };
 </script>
+
+<style scoped lang="scss">
+  label {
+    width:280px;
+    margin-top: 10px;
+  }
+  textarea {
+    height: 100px;
+    width: 100%
+  }
+  input, textarea, button {
+    border: 1px solid rgba($color-primary, 0.2)
+  }
+</style>
