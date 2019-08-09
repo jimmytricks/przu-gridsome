@@ -2,7 +2,7 @@
   <Layout>
     <div class="content-wrapper pb-8 pt-6 px-4 container mx-auto">
       <section class="page-text-content text-center home-text">
-        <h1 class="mb-2">Welcome to the ZU</h1>
+        <h1>Welcome to the ZU</h1>
         <logoSVG />
         <p>I am an English web designer and developer, moving from Vancouver, Canada to live in Edinburgh, UK.</p>
         <p>
@@ -15,13 +15,13 @@
 
     <h2 class="posts-header">Latest Blog Posts</h2>
     <section class="blog-posts">
-      <div class="container mx-auto pt-8 flex flex-wrap justify-center">
+      <div class="container mx-auto pt-8 flex flex-wrap justify-center mb-8">
         <div
-          class="inner-card-container w-full sm:w-1/2 lg:w-1/3 mb-8"
+          class="inner-card-container  sm:w-1/2 lg:w-1/3"
           v-for="post in $page.posts.edges"
           v-bind:key="post.node.title"
         >
-          <div class="mx-6 mb-6 rounded overflow-hidden shadow-lg bg-white h-full card-container">
+          <div class="mx-6 mb-6 rounded overflow-hidden shadow-lg bg-white card-container">
             <g-link class="card-link" v-bind:to="post.node.path">
               <div class="flex flex-col px-6 pt-4 pb-2">
                 <h3>{{ post.node.title }}</h3>
@@ -35,7 +35,7 @@
       </div>
       <div class="container mx-auto">
         <div class="view-all mx-6 mb-6 text-right">
-          <g-link to="/posts" class>View All Posts</g-link>
+          <g-link to="/blogs" class>View All Posts</g-link>
         </div>
       </div>
     </section>
