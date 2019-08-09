@@ -1,7 +1,8 @@
 <template>
   <layout>
+    <a id="top"></a>
     <section class="page-text-content container posts-page px-4 pb-8 pt-6">
-      <h1 class="pb-0">{{ $page.post.title }}</h1>
+      <h1 class="pb-0">{{ $page.post.title }}</h1>      
       <p v-if="$page.post.tech.length" class="p-0 text-xs">
         Category:
         <span v-for="(tech, index) in $page.post.tech" v-bind:key="tech.id">
@@ -24,7 +25,7 @@
 
       <div class="content" v-html="$page.post.content"></div>
       <div class="mt-6">
-        <a href="">Back To Top</a> | <g-link :to="postOrProjectlink">View All {{ postsOrProjects == true ? 'Projects' : 'Posts' }}</g-link>      
+        <a href="#top">Back To Top</a> | <g-link :to="postOrProjectlink">View All {{ postsOrProjects == true ? 'Projects' : 'Posts' }}</g-link>      
       </div>
     </section>
   </layout>

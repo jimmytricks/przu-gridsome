@@ -16,7 +16,7 @@ I created [DidYouWatchTheGame.com](https://DidYouWatchTheGame.com) as I wanted a
 
 The website uses the NHL API to get the data and is written entirely in vanilla JavaScript. 
 
-The site uses both CSS Grid and Flexbox for it's styling, along with CSS variables which allows the dynamic chang of website colours to match those of the different teams.
+The site uses both CSS Grid and Flexbox for it's styling, along with CSS variables, which allows the dynamic change of website colours to match those of the different teams. Go ahead and try it out by selecting different teams via the dropdown, or check these examples: [Washington Capitals](https://didyouwatchthegame.com/#15) and [Arziona Coyotes](https://didyouwatchthegame.com/#53) 
 
 ## Features
 
