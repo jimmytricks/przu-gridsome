@@ -8,7 +8,7 @@
           v-for="post in $page.posts.edges"
           v-bind:key="post.node.id"
         >
-          <div class="mx-6 rounded overflow-hidden shadow-lg bg-white h-full card-container">
+          <div class="m-6 rounded overflow-hidden shadow-lg bg-white h-full card-container">
             <g-link class="card-link" v-bind:to="post.node.path">
               <g-image :src="post.node.featureimg" />
               <div class="px-6 py-4">

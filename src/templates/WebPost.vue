@@ -5,9 +5,7 @@
       <p v-if="$page.post.tech.length" class="p-0 text-xs">
         Category:
         <span v-for="(tech, index) in $page.post.tech" v-bind:key="tech.id">
-          <span v-if="index != 0 ">,</span>
-          {{ tech }}
-        </span>
+        <span v-if="index != 0 ">, </span>{{ tech }}</span>
       </p>
       <p class="p-0 text-xs mb-4 pb-4 border-btm">Last updated: {{ $page.post.date }}</p>
       <div v-if="$page.post.featureimg">

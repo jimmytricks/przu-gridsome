@@ -15,7 +15,7 @@
 
     <h2 class="posts-header">Latest Blog Posts</h2>
     <section class="blog-posts">
-      <div class="container mx-auto pt-8 flex flex-wrap justify-center mb-8">
+      <div class="container mx-auto pt-8 flex flex-wrap justify-center">
         <div
           class="inner-card-container  sm:w-1/2 lg:w-1/3"
           v-for="post in $page.posts.edges"
@@ -123,5 +123,9 @@ export default {
   text-align: center;
   background-color: #353535;
   color: white;
+}
+
+svg {
+  margin-bottom: 10px;
 }
 </style>
