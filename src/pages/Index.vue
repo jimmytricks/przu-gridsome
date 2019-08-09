@@ -57,7 +57,7 @@
               </div>
             </g-link>
             <div class="tag-container px-2 py-4">
-              <span v-for="tech in post.node.tech" v-bind:key="tech.id" class="tech">{{ tech }}</span>
+              <span v-for="tech in post.node.tech" v-bind:key="tech.id" class="tech shadow-lg">{{ tech }}</span>
             </div>
           </div>
         </div>
