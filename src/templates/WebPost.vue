@@ -5,9 +5,9 @@
       <p v-if="$page.post.tech.length" class="p-0 text-xs">
         Category:
         <span v-for="(tech, index) in $page.post.tech" v-bind:key="tech.id">
-        <span v-if="index != 0 ">, </span>{{ tech }}</span>
+        <span v-if="index != 0 ">, </span>{{ tech }}</span> 
       </p>
-      <p class="p-0 text-xs mb-4 pb-4 border-btm">Last updated: {{ $page.post.date }}</p>
+      <p class="p-0 text-xs mb-4 pb-4 border-btm">Last updated: {{ $page.post.date }}</p>      
       <div v-if="$page.post.featureimg">
         <a v-bind:href="$page.post.websiteurl" class="card-link" target="_blank">
           <g-image :src="$page.post.featureimg" class="shadow-lg" />
@@ -23,6 +23,9 @@
       </div>
 
       <div class="content" v-html="$page.post.content"></div>
+      <div class="mt-6">
+        <a href="">Back To Top</a> | <g-link :to="postOrProjectlink">View All {{ postsOrProjects == true ? 'Projects' : 'Posts' }}</g-link>      
+      </div>
     </section>
   </layout>
 </template>
@@ -33,6 +36,19 @@ export default {
     return {
       title: this.$page.post.title
     };
+  },
+  data: function() {
+    return {
+      postsOrProjects: null
+    }
+  },
+  computed: {
+      postOrProjectlink() {
+          return '/' + (this.$page.post.website ? 'websites' : 'blogs');
+      }
+  },
+  created() {
+    this.postsOrProjects = this.$page.post.website
   }
 };
 </script>
@@ -46,6 +62,7 @@ export default {
         tech
         featureimg
         path
+        website
         websiteurl
         sourceurl
         }
