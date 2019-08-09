@@ -119,16 +119,17 @@ li {
 
 h1 {
   color: $color-primary;
-  font-weight: 700;
-  font-size: 1.2em;
-  padding: 10px 0;
+  font-size: 1.1em;
+  padding: 16px 0;
   text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
 }
 
 h2 {
   @extend h1;
   font-size: 1em;
-  font-weight: 600;
+  // font-weight: 600;
 }
 
 // *** Colours

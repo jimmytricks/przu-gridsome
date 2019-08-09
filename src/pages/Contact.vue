@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <section class="page-text-content container px-4 py-8">
+    <section class="page-text-content container px-4 pb-8 pt-6">
       <h1>Contact</h1>
       <form
         name="contact"
@@ -36,7 +36,7 @@
         <button type="submit" class="p-4 bg-yellow uppercase font-bold">Talk to me!</button>
       </form>
     </section>
-    
+
   </Layout>
 </template>
 

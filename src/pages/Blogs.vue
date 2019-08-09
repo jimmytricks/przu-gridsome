@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <h1 class="text-center">All Blog Posts</h1>
+    <h1 class="text-center bg-yellow">All Blog Posts</h1>
     <section class="blog-posts">
       <div class="container mx-auto pt-2 md:pt-8 flex flex-wrap justify-center">
         <div

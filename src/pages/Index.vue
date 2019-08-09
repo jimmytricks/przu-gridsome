@@ -1,8 +1,8 @@
 <template>
   <Layout>
-    <div class="content-wrapper py-8 px-4 container mx-auto">
+    <div class="content-wrapper pb-8 pt-6 px-4 container mx-auto">
       <section class="page-text-content text-center home-text">
-        <h1>Welcome to the ZU</h1>
+        <h1 class="mb-2">Welcome to the ZU</h1>
         <logoSVG />
         <p>I am an English web designer and developer, moving from Vancouver, Canada to live in Edinburgh, UK.</p>
         <p>

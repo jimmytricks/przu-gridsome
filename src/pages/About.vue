@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <section class="page-text-content container px-4 py-8">
+    <section class="page-text-content container px-4 pb-8 pt-6">
       <h1>About me</h1>
       <p>Web developer, in process of moving from Vancouver, Canada over to Edinburgh, UK.</p>
       <p>
