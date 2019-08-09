@@ -1,7 +1,7 @@
 ---
 title: Random Hockey Player
 date: 2018-12-28
-description: "Javascript application, uses the NHL API to randomly selects players from a team"
+description: Javascript application, uses the NHL API to randomly selects players from a team
 slug: randomhockeyplayer
 website: true
 websiteurl: https://randomhockeyplayer.przu.com/

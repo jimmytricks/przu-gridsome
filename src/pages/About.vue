@@ -2,13 +2,26 @@
   <Layout>
     <section class="page-text-content container px-4 pb-8 pt-6">
       <h1>About me</h1>
-      <p>Web developer, in process of moving from Vancouver, Canada over to Edinburgh, UK.</p>
+      <p>Hello! I'm a Web developer from England and currently in the process of moving from Vancouver, Canada over to Edinburgh, UK.</p>
       <p>
-        Currently interested in using
-        <a href="https://gridsome.org/" target="_blank" class="link-exception">Gridsome</a> and
-        <a href="https://vuejs.org/" target="_blank" class="link-exception">Vue.JS</a> to create fast and secure sites as part of
-        <a href="https://jamstack.org/">JAMstack</a>, using GraphQL, Tailwind and other nifty features.
+        Currently most interested in using
+        <a
+          href="https://gridsome.org/"
+          target="_blank"
+          class="link-exception"
+        >Gridsome</a> and
+        <a href="https://vuejs.org/" target="_blank" class="link-exception">Vue.js</a> to create fast and secure sites as part of
+        <a href="https://jamstack.org/">JAMstack</a>, using
+        <a href="https://graphql.org" target="_blank" class="link-exception">GraphQL</a> as the query language. When it comes to CSS, my current preference
+        <a href="https://sass-lang.com/" target="_blank" class="link-exception">SCSS</a>, or if a library is called for
+        <a href="https://tailwindcss.com" target="_blank" class="link-exception">Tailwind</a> is my current favourite.
       </p>
+      <a
+        href="https://github.com/jimmytricks/"
+        target="_blank"
+        class="link-exception"
+      >Check out what I've been working on at GitHub</a>
+      <p>When I'm not coding my favourite activities are playing and watching ice hockey & football, mountain biking and skiing.</p>
     </section>
   </Layout>
 </template>
@@ -16,7 +29,7 @@
 <script>
 export default {
   metaInfo: {
-    title: "About us"
+    title: "About me"
   }
 };
 </script>

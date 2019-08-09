@@ -25,7 +25,7 @@
 
       <div class="content" v-html="$page.post.content"></div>
       <div class="mt-6">
-        <a href="#top">Back To Top</a> | <g-link :to="postOrProjectlink">View All {{ postsOrProjects == true ? 'Projects' : 'Posts' }}</g-link>      
+        <a href="#top">Back To Top</a> | <g-link :to="postOrProjectlink">View All {{ postsOrProjects == true ? 'Projects' : 'Blog Posts' }}</g-link>      
       </div>
     </section>
   </layout>

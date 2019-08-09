@@ -4,10 +4,10 @@
       <section class="page-text-content text-center home-text">
         <h1>Welcome to the ZU</h1>
         <logoSVG />
-        <p>I am an English web designer and developer, moving from Vancouver, Canada to live in Edinburgh, UK.</p>
+        <p>I'm a Web developer from England and currently in the process of moving from Vancouver, Canada over to Edinburgh, UK.</p>
         <p>
           Feel free to browse around the site or
-          <g-link to="/contact">contact me</g-link> if you'd like.
+          <g-link to="/contact">contact me</g-link> if you'd like to say hi.
         </p>
         <p>Have a great day!</p>
       </section>
@@ -35,7 +35,7 @@
       </div>
       <div class="container mx-auto">
         <div class="view-all mx-6 mb-6 text-right">
-          <g-link to="/blogs" class>View All Posts</g-link>
+          <g-link to="/blogs" class>View All Blog Posts</g-link>
         </div>
       </div>
     </section>
@@ -75,7 +75,7 @@
 import logoSVG from "~/assets/img/svg/przu.svg";
 export default {
   metaInfo: {
-    title: "PRZU.com - Welcome to the ZU"
+    title: "Welcome to the ZU"
   },
   components: {
     logoSVG

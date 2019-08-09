@@ -17,7 +17,7 @@ function addStyleResource(rule) {
 }
 
 module.exports = {
-  siteName: 'PRZU.com - Welcome to the ZU',
+  siteName: 'PRZU.com',
   siteUrl: 'https://przu.com',
   icon: {
     favicon: './src/assets/img/favicon.png',

@@ -62,9 +62,9 @@
 <script>
 import logoSVG from "~/assets/img/svg/logo.svg";
 export default {
-  metaInfo: {
-    title: "PRZU.com - Welcome to the ZU"
-  },
+  // metaInfo: {
+  //   title: "PRZU.com - Welcome to the ZU"
+  // },
   components: {
     logoSVG
   },
@@ -122,7 +122,7 @@ h1 {
   font-size: 1.1em;
   padding: 16px 0;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   font-weight: 500;
 }
 
@@ -292,7 +292,8 @@ h2 {
     background-color: #272822;
     color: #f8f8f2;
     border-radius: 0.3rem;
-    padding: 4px 5px 5px;    
+    padding: 4px 5px 5px;
+    word-wrap: break-word;
   }
   pre {
     code {
