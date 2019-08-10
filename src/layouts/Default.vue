@@ -129,7 +129,6 @@ h1 {
 h2 {
   @extend h1;
   font-size: 1em;
-  // font-weight: 600;
 }
 
 // *** Colours
@@ -281,8 +280,9 @@ h2 {
 // *** Posts Page
 
 .posts-page {
-    h2 {
-    margin-top: 20px;
+  h2 {
+    margin-top: 12px;
+    padding-bottom: 4px;
   }
   ul {
     margin: 10px 0
@@ -294,6 +294,8 @@ h2 {
     border-radius: 0.3rem;
     padding: 4px 5px 5px;
     word-wrap: break-word;
+    display: inline-block; 
+    display: inline-flex;   
   }
   pre {
     code {
