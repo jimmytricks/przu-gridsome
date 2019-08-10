@@ -62,9 +62,12 @@
 <script>
 import logoSVG from "~/assets/img/svg/logo.svg";
 export default {
-  // metaInfo: {
-  //   title: "PRZU.com - Welcome to the ZU"
-  // },
+  metaInfo: {
+    // title: "PRZU.com - Welcome to the ZU"
+    meta: [
+      { name: 'description', content: 'Welcome to the ZU. A personal web development portfolio and blog' }
+    ]
+  },
   components: {
     logoSVG
   },
