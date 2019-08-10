@@ -102,8 +102,7 @@ Go ahead and run `gridsome develop` and you should be able to go and view your p
 
 You now have the basics and can go on to add in as much complexity as required. 
 
-To sort by date or title, you can do this:
-`posts: allWebPost (filter: { blogpost: { eq: true }}, sortBy: "title", order: ASC)`
+To sort by date or title, you can do this: `posts: allWebPost (filter: { blogpost: { eq: true }}, sortBy: "title", order: ASC)`
 
 To display two different queries, add it to page query. Here I have limited to the last 3 posts:
 
@@ -135,11 +134,11 @@ To display two different queries, add it to page query. Here I have limited to t
 ```
 
 To get these posts to display in our Vue template, I have done: 
-`<li v-for="post in $page.posts.edges" v-bind:key="post.node.title">{{ post.node.title }} - {{ post.node.date }}</li>
+`<li v-for="post in $page.posts.edges" v-bind:key="post.node.title">{{ post.node.title }} - {{ post.node.date }}</li>`
 
 ## Using images in markdown 
 
-If you want to use images in markdown, you can use: `![Alternative](../src/assets/img/sites/didyouwatchthegame.jpg)`
+If you want to use images in markdown, you can use: `![Alternative](../src/assets/img/sites/example.jpg)`
 
 ## Add SASS support
 
