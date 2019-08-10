@@ -177,6 +177,9 @@ h2 {
     display: flex;
     flex-grow: 1;
     flex-direction: column;
+    a {
+      word-wrap: break-word;
+    }
   }
 }
 
@@ -296,9 +299,7 @@ h2 {
     color: #f8f8f2;
     border-radius: 0.3rem;
     padding: 4px 5px 5px;
-    word-wrap: break-word;
-    display: inline-block; 
-    display: inline-flex;   
+    word-wrap: break-word; 
   }
   pre {
     code {
