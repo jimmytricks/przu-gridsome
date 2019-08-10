@@ -1,28 +1,46 @@
 ---
 title: How I built PRZU.com with Gridsome, Vue and GraphQL
-date: 2019-04-07 07:42:34
+date: 2019-04-07
 description: Gridsome is a fantastic tool for creating static sites. Here is brief write up of how I created PRZU.com 
 slug: building-przu
 blogpost: true
 ---
 
-Create a Gridsome site with
+## Overview
 
-`gridsome create new-project`
+In this overview I'll go through some of the initial steps to getting up and running with Gridsome.
 
-Add a posts folder, with some mark down files inside
-Add a templates for post (WebPost)
-Install source file system plugin
-`npm install @gridsome/source-filesystem`
+## Getting Started
 
-Install  transformerremark as dev dependecy
-`npm install @gridsome/transformer-remark --save-dev`
+First you will need to install the Gridsome CLI tool `npm install --global @gridsome/cli`
 
-Change gridsome config to
+Then create your first gridsome project `gridsome create new-project`
+
+We will use markdown files as blog posts, so first create a new posts folder in your root folder. Then create an example markdown file, which might look something like this:
+
+```
+---
+title: Example Post
+date: 2018-09-15 07:42:34
+description: "Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet."
+slug: first
+blogpost: true
+---
+
+## Example title
+
+Example content
+```
+
+Next, install the source file system plugin `npm install @gridsome/source-filesystem` and then transformer remark as a dev dependency `npm install @gridsome/transformer-remark --save-dev`
+
+The source filesystem and transformer remark will make the magic of converting the markdown files into posts we can display on the site. You will need to edit the gridsome config file after doing this, which isn't as worrying as it may first look. 
+
+Change it to
 
 ```
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'Example Blog',
   plugins: [
     {
       use: '@gridsome/source-filesystem',
@@ -38,12 +56,9 @@ module.exports = {
   },
 }
 ```
+Next up is to install Eslint, Vetur and GraphQL, all of which can read more thoroughly [here](https://gridsome.org/docs/dev-tools/). This helps with debugging and creating code, especially with graphql queries as it gives syntax highlighting. 
 
-Install Eslint, Vetur and GraphQL:
-https://gridsome.org/docs/dev-tools/
-This helps with debugging and creating code, especialy with graphql queries as it gives syntax highlighting
-
-Now we want to split our posts between blog posts and websites. In pages create seperate Posts.vue and Blogs.vue
+Now we want to split our posts between blog posts and websites. In pages create seperate Posts.vue and Blogs.vue. Here is an example for a list of blogs:
 
 ```
 <template>
@@ -81,23 +96,9 @@ export default {
 </page-query>
 ```
 
-This will display a list of blog posts, is uses the blogpost: variable to see which are true. Here is an example blogpost.md 
+This will display a list of blog posts, is uses the blogpost: variable to see which are true. If you look back at the example markdown file, you will see why we have added blogpost:true.
 
-```
----
-title: Example Post
-date: 2018-09-15 07:42:34
-description: "Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet."
-slug: first
-blogpost: true
----
-
-## Example title
-
-Example content
-```
-
-If you run `gridsome develop` you should be able to go and view your pages, i.e /posts or /blogs, if you have done the same as mine as it will show a corresponding list.
+Go ahead and run `gridsome develop` and you should be able to go and view your pages, i.e /posts or /blogs.
 
 You now have the basics and can go on to add in as much complexity as required. 
 
@@ -107,8 +108,6 @@ To sort by date or title, you can do this:
 To display two different queries, add it to page query. Here I have limited to the last 3 posts:
 
 ```
-<page-query>
-  query blogPosts {
     posts: allWebPost (filter: { blogpost: { eq: true }}, limit:3, sortBy: "date", order: DESC) {
       edges {
         node {
@@ -135,26 +134,23 @@ To display two different queries, add it to page query. Here I have limited to t
 </page-query>
 ```
 
-To get these posts, I have done: 
-`<li v-for="post in $page.posts.edges" v-bind:key="post.node.title">{{ post.node.title }} - {{ post.node.date }}</li>`
-
-#Tags/Categories
-
-Add a new field to add some tags and categories
+To get these posts to display in our Vue template, I have done: 
+`<li v-for="post in $page.posts.edges" v-bind:key="post.node.title">{{ post.node.title }} - {{ post.node.date }}</li>
 
 ## Using images in markdown 
 
-`![Alternative](../src/assets/img/sites/didyouwatchthegame.jpg)`
+If you want to use images in markdown, you can use: `![Alternative](../src/assets/img/sites/didyouwatchthegame.jpg)`
 
 ## Add SASS support
 
-Run `npm install -D sass-loader node-sass`
+For adding SASS support, run `npm install -D sass-loader node-sass`. After this you can then change the Vue template so that you can use SASS directly within it by changing your `<style>` tag to `<style scoped lang="scss">`. Note the scoped means that only the elements within that template are effected by the styling.
+
+However, at the time of writing one 'gotcha' is that if you are wanting to style the contents of a v-html, as I have done here with the markdown file, this will need to be styled globally. 
 
 ## Support for variables, mixins
 
-`npm i -D style-resources-loader`
-Change gridsome config and import in main.js
-https://gridsome.org/docs/assets-css/
+`npm i -D style-resources-loader` will give you support for variables, mixins, etc. 
+Change gridsome config and import in main.js, with more information available on the [gridsome docs](https://gridsome.org/docs/assets-css/)
 
 My gridsome.config.js at this stage:
 
@@ -197,20 +193,21 @@ module.exports = {
 }
 ```
 
-# Install Tailwind 
-`npm install -D gridsome-plugin-tailwindcss`
+## Install Tailwind 
 
-Create a tailwind config file `npx tailwind init`
+Tailwind is one of my favourite libraries, which is especially great for quick prototyping. 
 
-# Installing font
+Install it as a dev dependency `npm install -D gridsome-plugin-tailwindcss` and then create a tailwind config file `npx tailwind init`
 
-`npm i -d typeface-montserrat`
-Then require it in main.js: `require('typeface-open-sans')`
+In here you can add your usual [tailwind configuration](https://tailwindcss.com/docs/configuration/)
 
-# Adding SVG Support
-`npm i -d vue-svg-loader`
+## Installing font
 
-Chain webpack part of config now looks like
+It's also likely you will want to add some custom type. I personally installed this via NPM, with `npm i -d typeface-montserrat` and then required it in the main.js: `require('typeface-montserrat')`
+
+## Adding SVG Support
+
+Using SVGs can be setup by doing `npm i -d vue-svg-loader`, then you wil need to add some extra code to your gridsome config file
 
 ```
   chainWebpack (config) {
@@ -229,7 +226,8 @@ Chain webpack part of config now looks like
 	}
 }
 ```
-In your component, import it: `logoSVG from '~/assets/img/przu.svg'` then able to use it like `<logoSVG/>`
+
+To use an SVG like a component, first import it: `logoSVG from '~/assets/img/example.svg'` then you are able to use it like `<logoSVG/>`
 Lastly, add it to export
 ```
   components: {
@@ -237,55 +235,17 @@ Lastly, add it to export
   }
 ```
 
-# Tags/Categories
-Then add in support to categories using
+## Feature image
+For PRZU.com I have setup a featured image that will display on both the home page and also within the blog itself. Within the markdown itself I defined a feature image  `featureimg:/img/example.jpg`.
 
-`tech: ["WordPress", "PHP", "cURL"]`
+Then you can use a g-image for referencing this image, to avoid you having to update images in two seperate places. `<g-image :src="post.node.featureimg"/>`
 
-And to show on front end: 
+Within the GraphQL query, you can also add parameters to the feature image to change the height, image and the quality: `featureimg (width: 720, height: 400, quality: 90)`
 
-` v-for="post in $page.webposts.edges"  v-bind:key="post.node.title"`
+## Further development & Deployment 
 
-and loop categories within post
+That should be enough for you to start playing around with Gridsome and GraphQL to create something really cool. When you're ready to deploy, [Netlify](https://www.netlify.com/) offer a great solution that's very easy to set up. Netlify is also free for their low use tier, which is awesome. 
 
-#feature image
-Then add a featureimg field to the post, link it to image source
+First, push your site to a repo on Github then log into Netlify and hit 'New Site from Git', select github and find your repo. Select your master branch and for the build command enter `gridsome build`. Click deploy the site and voila it should work! (or in my case, need a while tinkering to fix some image path issues).
 
-` <g-image :src="post.node.featureimg"/>`
-
-Within query, you can change the image: `featureimg (width: 720, height: 400, quality: 90)`
-
-# Card styling
-
-To ensure that the tags stay at the bottom I used flex box and space between, while wrapping title and image within a container so they are always level
-
-# Linking to variable/dynamic paths
-`<g-link class="px-6 py-4 card-link" v-bind:to="post.node.path">`
-
-# Creating taxonomy tags
-
-
-```
-  refs: {
-    tags: {
-      typeName: 'Tag',
-      route: '/tag/:slug',
-      create: true
-    }
-  }
-```
- ^ wasn't able to figure it out
-
- ## SCSS/CSS
-
- For styling, I used scss and have all componenets scoped except default.vue, where I put defaults and any shared 
-
- ```
- <style scoped lang="scss">
-</style>
-   ```
-
-   # Deployment
-
-   Netlify, signup and add the site from git.
-   Select the repo that you have and put the 'dist' folder and 'gridsome build' as the build command
+Now when you want to update your blog, it's as simple as pushing your latest commit to GitHub and Netlify will automatically rebuild the site. How cool is that? Welcome to that [JAMstack](https://jamstack.org/) goodness. 
