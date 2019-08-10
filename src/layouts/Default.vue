@@ -48,7 +48,7 @@
             >Gridsome</a> framework on
             <a href="https://vuejs.org/" target="_blank" class="link-exception">Vue.JS</a>, using GraphQL.
           </p>
-          <g-link to="/posts/przu" class="text-sm">Interested? I wrote about it here</g-link>
+          <g-link to="/posts/building-przu" class="text-sm">Interested? I wrote about it here</g-link>
         </div>
         <div class="sm:w-1/2 text-left sm:text-right lg:mx-6">
           <p class="text-sm pb-0 font-bold">© PRZU.COM – All rights reserved.</p>
