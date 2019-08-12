@@ -1,6 +1,6 @@
 ---
 title: How I built PRZU.com with Gridsome, Vue and GraphQL
-date: 2019-04-07
+date: 2019-08-09
 description: Gridsome is a fantastic tool for creating static sites. Here is brief write up of how I created PRZU.com 
 slug: building-przu
 blogpost: true
@@ -58,7 +58,7 @@ module.exports = {
 ```
 Next up is to install Eslint, Vetur and GraphQL, all of which can read more thoroughly [here](https://gridsome.org/docs/dev-tools/). This helps with debugging and creating code, especially with graphql queries as it gives syntax highlighting. 
 
-Now we want to split our posts between blog posts and websites. In pages create seperate Posts.vue and Blogs.vue. Here is an example for a list of blogs:
+Now we want to split our posts between blog posts and websites. In pages create separate Posts.vue and Blogs.vue. Here is an example for a list of blogs:
 
 ```
 <template>
@@ -237,7 +237,7 @@ Lastly, add it to export
 ## Feature image
 For PRZU.com I have setup a featured image that will display on both the home page and also within the blog itself. Within the markdown itself I defined a feature image  `featureimg:/img/example.jpg`.
 
-Then you can use a g-image for referencing this image, to avoid you having to update images in two seperate places. `<g-image :src="post.node.featureimg"/>`
+Then you can use a g-image for referencing this image, to avoid you having to update images in two separate places. `<g-image :src="post.node.featureimg"/>`
 
 Within the GraphQL query, you can also add parameters to the feature image to change the height, image and the quality: `featureimg (width: 720, height: 400, quality: 90)`
 
