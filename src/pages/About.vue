@@ -16,7 +16,7 @@
         <a href="https://sass-lang.com/" target="_blank" class="link-exception">SCSS</a>, or if a library is called for
         <a href="https://tailwindcss.com" target="_blank" class="link-exception">Tailwind</a> is my current favourite. 
       </p>
-       <p>Also enjoying getting to grips with Node.js<a href="https://nodejs.dev/Node.js" target="_blank" class="link-exception">Tailwind</a>, as I look to transition into a full-stack developer.</p>
+       <p>Also enjoying getting to grips with <a href="https://nodejs.dev/Node.js" target="_blank" class="link-exception">Node.js</a>, as I look to transition into a full-stack developer.</p>
       <a
         href="https://github.com/jimmytricks/"
         target="_blank"
