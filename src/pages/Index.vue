@@ -4,10 +4,9 @@
       <section class="page-text-content text-center home-text">
         <h1>Welcome to the ZU</h1>
         <logoSVG />
-        <p>I'm a Web developer from England and currently in the process of moving from Vancouver, Canada over to Edinburgh, UK.</p>
+        <p>Hello! I'm a Web developer from England and have just moved to Edinburgh, UK.</p>
         <p>
-          Feel free to browse around the site or
-          <g-link to="/contact">contact me</g-link> if you'd like to say hi.
+          Feel free to <g-link to="/contact">contact me</g-link> if you'd like to say hi, or reach out on <a href="https://www.linkedin.com/in/james-h-82685053/" target="_blank" class="link-exception">LinkedIn</a>.
         </p>
         <p>Have a great day!</p>
       </section>

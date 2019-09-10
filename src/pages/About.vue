@@ -2,7 +2,7 @@
   <Layout>
     <section class="page-text-content container px-4 pb-8 pt-6">
       <h1>About me</h1>
-      <p>Hello! I'm a Web developer from England and currently in the process of moving from Vancouver, Canada over to Edinburgh, UK.</p>
+      <p>Hello! I'm a Web developer from England and have just moved to Edinburgh, UK.</p>
       <p>
         Currently most interested in using
         <a
@@ -14,8 +14,9 @@
         <a href="https://jamstack.org/">JAMstack</a>, using
         <a href="https://graphql.org" target="_blank" class="link-exception">GraphQL</a> as the query language. When it comes to CSS, my current preference
         <a href="https://sass-lang.com/" target="_blank" class="link-exception">SCSS</a>, or if a library is called for
-        <a href="https://tailwindcss.com" target="_blank" class="link-exception">Tailwind</a> is my current favourite.
+        <a href="https://tailwindcss.com" target="_blank" class="link-exception">Tailwind</a> is my current favourite. 
       </p>
+       <p>Also enjoying getting to grips with Node.js<a href="https://nodejs.dev/Node.js" target="_blank" class="link-exception">Tailwind</a>, as I look to transition into a full-stack developer.</p>
       <a
         href="https://github.com/jimmytricks/"
         target="_blank"
