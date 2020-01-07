@@ -2,7 +2,7 @@
   <Layout>
     <section class="page-text-content container px-4 pb-8 pt-6">
       <h1>About me</h1>
-      <p>Hello! I'm a Web developer from England and have just moved to Edinburgh, UK.</p>
+      <p>Hello! I'm a Web developer from the UK.</p>
       <p>
         Currently most interested in using
         <a
