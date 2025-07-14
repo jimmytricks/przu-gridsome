@@ -7,7 +7,7 @@
     "explore": "gridsome explore"
   },
   "engines": {
-    "node": "18.x"
+    "node": "16.x"
   },
   "dependencies": {
     "@gridsome/source-filesystem": "0.5.0",
